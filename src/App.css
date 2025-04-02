@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Prompt';
+}
+
+/* src/styles/App.css */
+.login-container {
+  margin: 0 auto;
+  padding: 10%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.App {
+  text-align: center;
+}
+
+.screensize {
+  width: 100%; /* จำกัดขนาดไม่เกิน iPhone 14 */
+  height: 100%; /* จำกัดขนาดไม่เกิน iPhone 14 */
+  min-height: 100vh;
+  background-color:#1E90FF;
+  padding: 10px;
+}
+
+.circle-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none; /* ไม่มีขอบปุ่ม */
+}
+
+.circle-image:active {
+  transform: scale(0.98); /* เมื่อกดปุ่มจะลดขนาดเล็กลง */
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* ให้รูปภาพไม่บิดเบือน แต่ครอบตัดให้พอดีกับพื้นที่ */
+}
+
+.input-box::placeholder {
+  color: #9ea0a0;
+}
+
+.input-box {
+  width: 100%;
+  height: 33px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #858686;
+  background-color: #ecf0f3;
+}
+
+.screensize_white {
+  position: relative; 
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  flex: 1;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+  gap: 15px; /* เพิ่มระยะห่างระหว่างโพสต์ */
+  width: 100%;
+  padding: 10px;
+}
+
+.post_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 15px;
+  background-color: #1E90FF;
+  padding: 10px;
+  border: none;
+}
+
+.post_box b {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF; 
+}
+
+.title-price-address-container{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.title{
+  position: relative; 
+  border: none;
+  white-space: normal; /* อนุญาตให้ขึ้นบรรทัดใหม่ */
+  word-wrap: break-word; /* ให้ข้อความตัดคำเมื่อเกินขอบ */
+}
+
+.title p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 0.5;
+}
+
+.box_price{
+  position: relative;
+  min-width: auto; /* ให้ขยายตามข้อความ */
+  width: fit-content; /* ปรับขนาดอัตโนมัติ */
+  padding: 2px 9px; /* เพิ่ม padding เพื่อให้ดูดีขึ้น */
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #76B7F6B2;
+  display: flex; /* ใช้ flexbox จัดตำแหน่ง */
+  align-items: center; /* จัดข้อความกึ่งกลางแนวตั้ง */
+  justify-content: center;
+}
+
+.box_price a{ 
+  font-size: 12px;
+  font-weight: 700;
+  color: #4D4C4CC7;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.box_address_container {
+  display: flex;
+  gap: 5px; /* ระยะห่างระหว่างกล่อง */
+  flex-wrap: wrap;
+}
+
+.box_address{
+  position:relative;
+  min-width: auto; /* ให้ขยายตามข้อความ */
+  width: fit-content; /* ปรับขนาดอัตโนมัติ */
+  padding: 2px 8px; /* เพิ่ม padding เพื่อให้ดูดีขึ้น */
+  height: 18px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #BBBBBB;
+  display: flex; /* ใช้ flexbox จัดตำแหน่ง */
+  align-items: center; /* จัดข้อความกึ่งกลางแนวตั้ง */
+  justify-content: center;
+}
+
+.box_address a{ 
+  font-size: 12px;
+  font-weight: 700;
+  color: #4D4C4C;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.pic_job{
+  width: 100%;
+  height: 175px;
+  border-radius: 15px;
+  border: none; 
+  background-color: #f4f4f4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pic_job img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ให้รูปภาพไม่บิดเบือน แต่ครอบตัดให้พอดีกับพื้นที่ */
+}
+
+.circle-image-technician {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+}
+
+.circle-image-technician img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.menu {
+  display: flex; /*เดวมาหาคำตอบ*/
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.menu li  {
+  list-style: none;
+  position: relative;
+}
+
+.menu li a {
+  margin: auto; /* จัดกึ่งกลางแนวตั้ง */
+  font-size :19px;
+  font-weight:650;
+}
+
+.menu li:hover .dropdown  {
+  display: block;
+}
+
+.menu li:hover{
+  border-radius: 50%;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  bottom: 0%; /* ให้ dropdown แสดงขึ้นด้านบน */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1E90FFA6;
+  border-radius: 30px;
+  width: 60px; /* ปรับขนาดตามต้องการ */
+  padding: 10px 0;
+  z-index: 10; /* ให้ dropdown อยู่ด้านบนสุด */
+}
+
+.dropdown li a{
+  text-decoration: none;
+  margin-top: 12px;
+  padding: 4px;
+  display: block ;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.dropdown li a:hover {
+  border-radius: 25px;
+  width: 100%;
+}
+
+.star-rating {
+  font-size: 20px;
+  color: gold;
+}
+
+.filled-star {
+  color: orange;
+}
+
+.empty-star {
+  color: white;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.province-filters {
+  display: flex;
+  gap: 4px;
+}
